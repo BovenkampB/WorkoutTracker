@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import {ref} from 'vue'
+import axios from "axios";
 import ExerciseInput from "@/components/exerciseInput.vue";
 
 const selected = ref('')
@@ -20,6 +21,18 @@ const workout2 = ["BP", "DB walking lunges", "Reverse grip lat pulldowns", "Seat
 
 defineProps(['modelValue'])
 defineEmits(['update:modelValue'])
+
+
+
+async function logData() {
+    try {
+        const response = await axios.get('http://localhost:3000/');
+        console.log(response);
+        alert(response);
+    } catch (error) {
+        console.error(error);
+    }
+}
 
 </script>
 <template>
@@ -47,7 +60,7 @@ defineEmits(['update:modelValue'])
                            :excersiseName="ex"/>
 
                         <p>
-                            <input type="submit" name="submit" id="submit" value="submit"/>
+                            <button @click="logData" type="button">Submit</button>
                         </p>
         </form>
         <!--        <button @click="count++">Voeg setje toe</button>-->
