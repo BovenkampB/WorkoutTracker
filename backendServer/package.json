@@ -1,8 +1,8 @@
 {
   "name": "ApplicationName",
-  "version": "0.0.1",
-  "description": "Application Description",
-  "main": "server.js",
+  "version": "1.0.0",
+  "description": "MongoDB Node.js driver and Atlas Starter Application",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
@@ -10,15 +10,20 @@
     "type": "git",
     "url": "https://github.com/BovenkampB/WorkoutTracker.git"
   },
+  "author": "bart.bov@gmail.com",
+  "license": "ISC",
   "dependencies": {
     "angular": "latest",
     "angular-ui-router": "~0.2.11",
     "dat-gui": "latest",
-    "express": "~3.0.1",
     "mongodb": "4.1",
     "path": "latest",
     "q": "latest",
     "sequelize": "latest",
-    "tedious": "latest"
+    "tedious": "latest",
+    "express": "^4.15.3",
+    "express-sanitizer": "^1.0.2",
+    "express-validator": "^4.2.1",
+    "helmet": "^3.9.0"
   }
 }
